@@ -21,7 +21,7 @@ namespace Xunit.Should
 			Assert.Contains(item, series);
 		}
 
-		public static void ShouldContain<T>(this IEnumerable<T> series, T item, IComparer<T> comparer)
+		public static void ShouldContain<T>(this IEnumerable<T> series, T item, IEqualityComparer<T> comparer)
 		{
 			Assert.Contains(item, series, comparer);
 		}
@@ -41,7 +41,7 @@ namespace Xunit.Should
 			Assert.DoesNotContain(item, series);
 		}
 
-		public static void ShouldNotContain<T>(this IEnumerable<T> series, T item, IComparer<T> comparer)
+		public static void ShouldNotContain<T>(this IEnumerable<T> series, T item, IEqualityComparer<T> comparer)
 		{
 			Assert.DoesNotContain(item, series, comparer);
 		}
@@ -61,7 +61,7 @@ namespace Xunit.Should
 			Assert.Equal(other, self);
 		}
 
-		public static void ShouldBe<T>(this T self, T other, IComparer<T> comparer)
+		public static void ShouldBe<T>(this T self, T other, IEqualityComparer<T> comparer)
 		{
 			Assert.Equal(other, self, comparer);
 		}
@@ -71,7 +71,7 @@ namespace Xunit.Should
 			Assert.NotEqual(other, self);
 		}
 
-		public static void ShouldNotBe<T>(this T self, T other, IComparer<T> comparer)
+		public static void ShouldNotBe<T>(this T self, T other, IEqualityComparer<T> comparer)
 		{
 			Assert.NotEqual(other, self, comparer);
 		}
@@ -116,12 +116,12 @@ namespace Xunit.Should
 			Assert.False(self, message);
 		}
 
-		public static void ShouldBeInRange<T>(this T self, T low, T high)
+		public static void ShouldBeInRange<T>(this T self, T low, T high) where T : IComparable
 		{
 			Assert.InRange(self, low, high);
 		}
 
-		public static void ShouldNotBeInRange<T>(this T self, T low, T high)
+		public static void ShouldNotBeInRange<T>(this T self, T low, T high) where T : IComparable
 		{
 			Assert.NotInRange(self, low, high);
 		}
