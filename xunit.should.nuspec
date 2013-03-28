@@ -6,7 +6,7 @@
     <title>XUnit Should</title>
     <authors>Nate Kohari</authors>
     <owners>Cristian Prieto</owners>
-    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <projectUrl>https://github.com/cprieto/xunit.should</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Should extensions for the XUnit framework</description>
     <copyright>Copyright 2013</copyright>
