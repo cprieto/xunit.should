@@ -1,18 +1,15 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
-    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <id>xunit.should</id>
+    <version>1.0</version>
+    <title>XUnit Should</title>
+    <authors>Nate Kohari</authors>
+    <owners>Cristian Prieto</owners>
     <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <description>Should extensions for the XUnit framework</description>
     <copyright>Copyright 2013</copyright>
-    <tags>Tag1 Tag2</tags>
+    <tags>should xunit</tags>
   </metadata>
 </package>

@@ -1,7 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.should", "src\xunit.should\xunit.should.csproj", "{9B8FA2B5-6F5A-4A40-8E83-42CB25796BF9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.should", "xunit.should\xunit.should.csproj", "{9B8FA2B5-6F5A-4A40-8E83-42CB25796BF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1A7B91F9-34D0-4C37-A7E1-43819A12BCCA}"
+	ProjectSection(SolutionItems) = preProject
+		xunit.should.nuspec = xunit.should.nuspec
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
