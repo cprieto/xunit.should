@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xunit.should", "src\xunit.should\xunit.should.csproj", "{9B8FA2B5-6F5A-4A40-8E83-42CB25796BF9}"
 EndProject
 Global
