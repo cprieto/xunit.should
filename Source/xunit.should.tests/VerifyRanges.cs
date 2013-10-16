@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 
+using Xunit.Should.Sdk;
+
 namespace Xunit.Should.Tests
 {
     public class VerifyRanges
