@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>xunit.should</id>
+    <version>0.0.0</version>
+    <title>XUnit Should</title>
+    <authors>Nate Kohari, Eddie Garmon</authors>
+    <owners>Cristian Prieto, Eddie Garmon</owners>
+    <projectUrl>https://github.com/cprieto/xunit.should</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Should extensions for the XUnit framework</description>
+    <copyright>Copyright © 2009-2013</copyright>
+    <tags>should xunit</tags>
+    <dependencies>
+      <dependency id="xunit" version="1.9.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\xunit.should.dll" target="lib\net35" />
+    <file src="bin\Release\xunit.should.pdb" target="lib\net35" />
+  </files>
+</package>
