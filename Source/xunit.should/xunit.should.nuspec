@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>xunit.should</id>
-    <version>0.0.0</version>
+    <version>0.0.0-sv</version>
     <title>XUnit Should</title>
     <authors>Nate Kohari, Eddie Garmon</authors>
     <owners>Cristian Prieto, Eddie Garmon</owners>
