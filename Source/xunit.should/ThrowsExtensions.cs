@@ -5,14 +5,28 @@ namespace Xunit.Should
 {
     public static class ThrowsExtensions
     {
-        public static void ShouldBeThrownBy<T>(this T expected, Assert.ThrowsDelegate method) where T : Exception {
-            var thrown = Assert.Throws<T>(method);
+        public static void ShouldBeThrownBy<T>(this T expected, Assert.ThrowsDelegate testCode) where T : Exception {
+            var thrown = Assert.Throws<T>(testCode);
             Assert.Equal(expected, thrown, ExceptionComparer.Instance);
         }
 
-        public static void ShouldBeThrownBy<T>(this T expected, Assert.ThrowsDelegateWithReturn method) where T : Exception {
-            var thrown = Assert.Throws<T>(method);
+        public static void ShouldBeThrownBy<T>(this T expected, Assert.ThrowsDelegateWithReturn testCode) where T : Exception {
+            var thrown = Assert.Throws<T>(testCode);
             Assert.Equal(expected, thrown, ExceptionComparer.Instance);
+        }
+
+        public static void ShouldThrow<T>(this Action testCode, string message = null) where T : Exception {
+            var thrown = Assert.Throws<T>(() => testCode);
+            if (message != null) {
+                Assert.Equal(message, thrown.Message);
+            }
+        }
+
+        public static void ShouldThrow<T>(Func<object> testCode, string message = null) where T : Exception {
+            var thrown = Assert.Throws<T>(() => testCode);
+            if (message != null) {
+                Assert.Equal(message, thrown.Message);
+            }
         }
 
         internal class ExceptionComparer : IEqualityComparer<Exception>

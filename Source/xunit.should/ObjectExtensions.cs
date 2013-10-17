@@ -10,6 +10,16 @@ namespace Xunit.Should
     /// </summary>
     public static class ObjectExtensions
     {
+        [Obsolete("Use ShouldEqual instead.")]
+        public static void ShouldBe<T>(this T self, T other) {
+            Assert.Equal(other, self);
+        }
+
+        [Obsolete("Use ShouldEqual instead.")]
+        public static void ShouldBe<T>(this T self, T other, IEqualityComparer<T> comparer) {
+            Assert.Equal(other, self, comparer);
+        }
+
         public static void ShouldBeDerivedFrom<T>(this object @object) {
             Assert.IsAssignableFrom<T>(@object);
         }
@@ -81,23 +91,14 @@ namespace Xunit.Should
             Assert.Equal(expected, actual, comparer);
         }
 
-        /// <summary>
-        ///     Verifies that an object reference is not null.
-        /// </summary>
-        /// <param name="object">The object to be validated</param>
-        /// <exception cref="NotNullException">Thrown when the object is not null</exception>
-        public static void ShouldNotBeNull(this object @object) {
-            Assert.NotNull(@object);
+        [Obsolete("Use ShouldNotEqual instead.")]
+        public static void ShouldNotBe<T>(this T self, T other) {
+            Assert.NotEqual(other, self);
         }
 
-        /// <summary>
-        ///     Verifies that two objects are not the same instance.
-        /// </summary>
-        /// <param name="actual">The actual object instance</param>
-        /// <param name="expected">The expected object instance</param>
-        /// <exception cref="NotSameException">Thrown when the objects are the same instance</exception>
-        public static void ShouldNotBeSameAs(this object actual, object expected) {
-            Assert.NotSame(expected, actual);
+        [Obsolete("Use ShouldNotEqual instead.")]
+        public static void ShouldNotBe<T>(this T self, T other, IEqualityComparer<T> comparer) {
+            Assert.NotEqual(other, self, comparer);
         }
 
         /// <summary>
@@ -118,6 +119,25 @@ namespace Xunit.Should
         /// <exception cref="IsTypeException">Thrown when the object is the given type</exception>
         public static void ShouldNotBeInstanceOf(this object @object, Type expectedType) {
             Assert.IsNotType(expectedType, @object);
+        }
+
+        /// <summary>
+        ///     Verifies that an object reference is not null.
+        /// </summary>
+        /// <param name="object">The object to be validated</param>
+        /// <exception cref="NotNullException">Thrown when the object is not null</exception>
+        public static void ShouldNotBeNull(this object @object) {
+            Assert.NotNull(@object);
+        }
+
+        /// <summary>
+        ///     Verifies that two objects are not the same instance.
+        /// </summary>
+        /// <param name="actual">The actual object instance</param>
+        /// <param name="expected">The expected object instance</param>
+        /// <exception cref="NotSameException">Thrown when the objects are the same instance</exception>
+        public static void ShouldNotBeSameAs(this object actual, object expected) {
+            Assert.NotSame(expected, actual);
         }
 
         /// <summary>

@@ -2,31 +2,31 @@
 
 namespace Xunit.Should
 {
-	internal static class StringComparisonExtensions
-	{
-		public static StringComparer GetComparer(this StringComparison comparisonType) {
-			switch (comparisonType) {
-				case StringComparison.CurrentCulture:
-					return StringComparer.CurrentCulture;
+    internal static class StringComparisonExtensions
+    {
+        public static StringComparer GetComparer(this StringComparison comparisonType) {
+            switch (comparisonType) {
+                case StringComparison.CurrentCulture:
+                    return StringComparer.CurrentCulture;
 
-				case StringComparison.CurrentCultureIgnoreCase:
-					return StringComparer.CurrentCultureIgnoreCase;
+                case StringComparison.CurrentCultureIgnoreCase:
+                    return StringComparer.CurrentCultureIgnoreCase;
 
-				case StringComparison.InvariantCulture:
-					return StringComparer.InvariantCulture;
+                case StringComparison.InvariantCulture:
+                    return StringComparer.InvariantCulture;
 
-				case StringComparison.InvariantCultureIgnoreCase:
-					return StringComparer.InvariantCultureIgnoreCase;
+                case StringComparison.InvariantCultureIgnoreCase:
+                    return StringComparer.InvariantCultureIgnoreCase;
 
-				case StringComparison.Ordinal:
-					return StringComparer.Ordinal;
+                case StringComparison.Ordinal:
+                    return StringComparer.Ordinal;
 
-				case StringComparison.OrdinalIgnoreCase:
-					return StringComparer.OrdinalIgnoreCase;
+                case StringComparison.OrdinalIgnoreCase:
+                    return StringComparer.OrdinalIgnoreCase;
 
-				default:
-					throw new ArgumentOutOfRangeException("comparisonType");
-			}
-		}
-	}
+                default:
+                    throw new ArgumentOutOfRangeException("comparisonType");
+            }
+        }
+    }
 }
