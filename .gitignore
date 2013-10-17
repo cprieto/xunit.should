@@ -1,7 +1,6 @@
 bin
 obj
-build
-dist
+Build/Artifacts/*
 *.suo
 *resharper*
 _ReSharper.*
